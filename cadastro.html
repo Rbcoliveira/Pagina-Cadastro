@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Dados Pessoais</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333; /*Alteração de cor do corpo de texto*/
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 10px;
+    }
+
+    header {
+      background-image: url('cadastro.jpg'); /* Caminho da imagem */
+      background-size: 50%; /* Ajusta o tamanho da imagem ao container,metade do tamanho do containe */
+      background-position: center; /* Centraliza a imagem */
+      color: white; /* Cor do texto sobre o fundo */
+      padding: 60px 20px; /* Espaçamento interno */
+      text-align: center;
+      font-size: 2em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Sombra do texto */
+    }
+
+    footer {
+      background-color: #ddd;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .perfil img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+      border-bottom: 1px solid #111010;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Formulário de Dados Pessoais</h1>
+    </header>
+
+    <section>
+      <h2>Dados Pessoais</h2>
+      <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="datanasc">Data de Nascimento:</label><br>
+        <input type="date" id="datanasc" name="datanasc" required><br><br>
+        
+        <label for="genero">Genero:</label><br>
+        <form>
+          <input type="radio" id="masculino" name="genero" value="Masculino">
+          <label for="masculino">Masculino</label><br>
+
+          <input type="radio" id="feminino" name="genero" value="Feminino">
+          <label for="feminino">Feminino</label><br>
+
+          <input type="radio" id="outro" name="genero" value="Outro">
+          <label for="outro">Outro</label><br>
+
+          <input type="radio" id="ninformar" name="genero" value="NaoInformar">
+          <label for="ninformar">Prefiro não Informar</label><br><br>
+        </form>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="number" id="telefone" name="telefone" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br>
+
+        <h2>Informações Academicas</h2>
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso">
+          <option value="computacao">Computação</option>
+          <option value="ccomputacao">Ciencia da Computação</option>
+          <option value="engsoft">Engenharia de Software</option>
+          <option value="bsi">Sistemas de Informação</option>
+          <option value="outro">Outros</option>
+        </select><br><br>
+
+      <label for="semestre">Informe seu semestre:</label>
+      <input type="number" id="semestre" name="semestre" min="1" max="12"><br>
+
+       <h2>Preferencias Relacionadas ao Evento</h2>
+      
+       <form>
+        <h4>Quais suas áreas de interesse?</h4>
+        <input type="checkbox" id="InteligenciaArt" name="areadeinteresse" valeu="Inteligencia Artificial">
+        <label for="InteligenciaArt">Inteligencia Artificial</label><br>
+        <input type="checkbox" id="DesenvolvimentoWeb" name="areadeinteresse" valeu="DesenvolvimentoWeb">
+        <label for="DesenvolvimentoWeb">Desenvolvimento Web</label><br>
+        <input type="checkbox" id="SegurançadaInformacao" name="areadeinteresse" valeu="SegurançadaInformacao">
+        <label for="SegurançadaInformacao">Segurança da Informação</label><br><br>
+       </form>
+
+       <label for="restric">Restrições Alimentares:</label><br>
+       <textarea id="restric" name="restric" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 - RbcEnterprise - Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
